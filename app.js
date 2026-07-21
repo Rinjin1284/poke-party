@@ -1,6 +1,7 @@
 let POKEMON = [];
 let selected = []; // array of pokemon entries, allows duplicates, max 6
 let charPhotoDataUrl = null;
+let finalImageUrl = null;
 
 const $ = (id) => document.getElementById(id);
 
@@ -105,16 +106,22 @@ function showResult() {
 function backToBuild() {
   $("result-screen").classList.add("hidden");
   $("build-screen").classList.remove("hidden");
+  $("finalImageWrap").classList.add("hidden");
+  $("saveBtn").textContent = "カード画像を作成";
 }
 
 function resetAll() {
   selected = [];
   charPhotoDataUrl = null;
+  if (finalImageUrl) URL.revokeObjectURL(finalImageUrl);
+  finalImageUrl = null;
   $("charName").value = "";
   $("pokeSearch").value = "";
   $("photoImg").classList.add("hidden");
   $("photoImg").src = "";
   $("cameraIcon").classList.remove("hidden");
+  $("finalImageWrap").classList.add("hidden");
+  $("saveBtn").textContent = "カード画像を作成";
   renderCandidates();
   renderSlots();
   backToBuild();
@@ -122,34 +129,37 @@ function resetAll() {
 
 async function saveAsImage() {
   const node = $("resultCard");
-  $("saveHint").classList.add("hidden");
+  const btn = $("saveBtn");
+  btn.disabled = true;
+  btn.textContent = "作成中…";
   try {
     const canvas = await html2canvas(node, { backgroundColor: "#f4f3ef", useCORS: true, scale: 2 });
-    canvas.toBlob(async (blob) => {
-      const fileName = `${($("resultName").textContent || "team").trim()}_pokeparty.png`;
-      const file = new File([blob], fileName, { type: "image/png" });
-
-      if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        try {
-          await navigator.share({ files: [file], title: fileName });
-          return;
-        } catch (e) {
-          // user cancelled share, fall through to download
-        }
-      }
-
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = fileName;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      $("saveHint").classList.remove("hidden");
+    canvas.toBlob((blob) => {
+      if (finalImageUrl) URL.revokeObjectURL(finalImageUrl);
+      finalImageUrl = URL.createObjectURL(blob);
+      $("finalImage").src = finalImageUrl;
+      $("finalImageWrap").classList.remove("hidden");
+      $("finalImageWrap").scrollIntoView({ behavior: "smooth", block: "start" });
+      btn.disabled = false;
+      btn.textContent = "カード画像を作り直す";
     }, "image/png");
   } catch (e) {
+    btn.disabled = false;
+    btn.textContent = "カード画像を作成";
     alert("画像の生成に失敗しました: " + e.message);
   }
+}
+
+function cropToSquareDataUrl(img, size = 300) {
+  const canvas = document.createElement("canvas");
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext("2d");
+  const side = Math.min(img.naturalWidth, img.naturalHeight);
+  const sx = (img.naturalWidth - side) / 2;
+  const sy = (img.naturalHeight - side) / 2;
+  ctx.drawImage(img, sx, sy, side, side, 0, 0, size, size);
+  return canvas.toDataURL("image/png");
 }
 
 function setupPhotoPicker() {
@@ -159,11 +169,15 @@ function setupPhotoPicker() {
     if (!file) return;
     const reader = new FileReader();
     reader.onload = (ev) => {
-      charPhotoDataUrl = ev.target.result;
-      const img = $("photoImg");
-      img.src = charPhotoDataUrl;
-      img.classList.remove("hidden");
-      $("cameraIcon").classList.add("hidden");
+      const tempImg = new Image();
+      tempImg.onload = () => {
+        charPhotoDataUrl = cropToSquareDataUrl(tempImg);
+        const img = $("photoImg");
+        img.src = charPhotoDataUrl;
+        img.classList.remove("hidden");
+        $("cameraIcon").classList.add("hidden");
+      };
+      tempImg.src = ev.target.result;
     };
     reader.readAsDataURL(file);
   });
