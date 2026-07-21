@@ -114,6 +114,7 @@ function resetAll() {
   $("pokeSearch").value = "";
   $("photoImg").classList.add("hidden");
   $("photoImg").src = "";
+  $("cameraIcon").classList.remove("hidden");
   renderCandidates();
   renderSlots();
   backToBuild();
@@ -162,6 +163,7 @@ function setupPhotoPicker() {
       const img = $("photoImg");
       img.src = charPhotoDataUrl;
       img.classList.remove("hidden");
+      $("cameraIcon").classList.add("hidden");
     };
     reader.readAsDataURL(file);
   });
