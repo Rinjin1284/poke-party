@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>だれのポケパーティー？</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2b2f77">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <h1>だれのポケパーティー？</h1>
+  <p class="subtitle">キャラが持ってそうなポケモンを6匹選ぼう</p>
+</header>
+
+<main id="build-screen">
+
+  <section class="field">
+    <label for="charName">キャラ名</label>
+    <input type="text" id="charName" placeholder="例：ミサワ" autocomplete="off">
+  </section>
+
+  <section class="field">
+    <label for="pokeSearch">ポケモン名で検索（ひらがな・カタカナOK）</label>
+    <input type="text" id="pokeSearch" placeholder="例：あい" autocomplete="off">
+  </section>
+
+  <section id="candidates" class="candidates" aria-live="polite"></section>
+
+  <section class="slots-section">
+    <p class="slots-label">選択済み（<span id="slotCount">0</span>/6）</p>
+    <div id="slots" class="slots-grid"></div>
+  </section>
+
+  <button id="resetBtn" class="ghost-btn">最初からやり直す</button>
+
+</main>
+
+<main id="result-screen" class="hidden">
+  <div id="resultCard" class="result-card">
+    <div class="result-header">
+      <button id="photoBtn" class="photo-circle" aria-label="キャラの写真を選ぶ">
+        <img id="photoImg" class="hidden" alt="">
+        <i class="camera-icon">📷</i>
+      </button>
+      <div class="result-title">
+        <p class="result-caption">が持ってそうなポケモン</p>
+        <p id="resultName" class="result-name"></p>
+      </div>
+    </div>
+    <div id="resultGrid" class="result-grid"></div>
+  </div>
+  <input type="file" id="photoInput" accept="image/*" class="hidden">
+
+  <div class="result-actions">
+    <button id="saveBtn" class="primary-btn">画像として保存</button>
+    <button id="backBtn" class="ghost-btn">選び直す</button>
+  </div>
+  <p id="saveHint" class="save-hint hidden">画像が開いたら、長押し（または共有）から「写真に保存」を選んでください。</p>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
