@@ -170,6 +170,7 @@ function setupPhotoPicker() {
 function init() {
   $("pokeSearch").addEventListener("input", renderCandidates);
   $("resetBtn").addEventListener("click", resetAll);
+  $("gotoResultBtn").addEventListener("click", showResult);
   $("backBtn").addEventListener("click", backToBuild);
   $("saveBtn").addEventListener("click", saveAsImage);
   setupPhotoPicker();
