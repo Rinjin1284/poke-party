@@ -282,3 +282,16 @@ main {
   color: var(--ink-soft);
   margin-top: 10px;
 }
+
+.final-image-wrap {
+  max-width: 480px;
+  margin: 1.25rem auto 0;
+  text-align: center;
+}
+
+.final-image-wrap img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1.5px solid var(--line);
+  -webkit-touch-callout: default;
+}
