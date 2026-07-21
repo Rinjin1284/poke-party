@@ -57,10 +57,14 @@
   <input type="file" id="photoInput" accept="image/*" class="hidden">
 
   <div class="result-actions">
-    <button id="saveBtn" class="primary-btn">画像として保存</button>
+    <button id="saveBtn" class="primary-btn">カード画像を作成</button>
     <button id="backBtn" class="ghost-btn">選び直す</button>
   </div>
-  <p id="saveHint" class="save-hint hidden">画像が開いたら、長押し（または共有）から「写真に保存」を選んでください。</p>
+
+  <div id="finalImageWrap" class="final-image-wrap hidden">
+    <img id="finalImage" alt="完成したポケパーティーの画像">
+    <p class="save-hint">↑ 画像を長押しして「写真に保存」を選んでください</p>
+  </div>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
