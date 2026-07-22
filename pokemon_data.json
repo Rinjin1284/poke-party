@@ -5851,7 +5851,7 @@
 "ちぇりむ"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10038.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/421-sunshine.png"
 },
 {
 "form_id": "421",
@@ -5873,7 +5873,7 @@
 "からなくし"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10039.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/422-east.png"
 },
 {
 "form_id": "422",
@@ -5895,7 +5895,7 @@
 "とりとどん"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10040.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/423-east.png"
 },
 {
 "form_id": "423",
