@@ -5846,18 +5846,18 @@
 "form_id": "10038",
 "pokemon_id": "421",
 "species_id": "421",
-"display_name": "チェリム",
+"display_name": "チェリム(ポジフォルム)",
 "kana_keys": [
 "ちぇりむ"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/421.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10038.png"
 },
 {
 "form_id": "421",
 "pokemon_id": "421",
 "species_id": "421",
-"display_name": "チェリム",
+"display_name": "チェリム(ネガフォルム)",
 "kana_keys": [
 "ちぇりむ"
 ],
@@ -5868,18 +5868,18 @@
 "form_id": "10039",
 "pokemon_id": "422",
 "species_id": "422",
-"display_name": "カラナクシ",
+"display_name": "カラナクシ(ひがしのうみ)",
 "kana_keys": [
 "からなくし"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/422.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10039.png"
 },
 {
 "form_id": "422",
 "pokemon_id": "422",
 "species_id": "422",
-"display_name": "カラナクシ",
+"display_name": "カラナクシ(にしのうみ)",
 "kana_keys": [
 "からなくし"
 ],
@@ -5890,18 +5890,18 @@
 "form_id": "10040",
 "pokemon_id": "423",
 "species_id": "423",
-"display_name": "トリトドン",
+"display_name": "トリトドン(ひがしのうみ)",
 "kana_keys": [
 "とりとどん"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/423.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10040.png"
 },
 {
 "form_id": "423",
 "pokemon_id": "423",
 "species_id": "423",
-"display_name": "トリトドン",
+"display_name": "トリトドン(にしのうみ)",
 "kana_keys": [
 "とりとどん"
 ],
@@ -9227,7 +9227,7 @@
 "とりみあん"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10115.png"
 },
 {
 "form_id": "10116",
@@ -9238,7 +9238,7 @@
 "とりみあん"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10116.png"
 },
 {
 "form_id": "10117",
@@ -9249,7 +9249,7 @@
 "とりみあん"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10117.png"
 },
 {
 "form_id": "10118",
@@ -9260,7 +9260,7 @@
 "とりみあん"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10118.png"
 },
 {
 "form_id": "10119",
@@ -9271,7 +9271,7 @@
 "とりみあん"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10119.png"
 },
 {
 "form_id": "10120",
@@ -9282,7 +9282,7 @@
 "とりみあん"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10120.png"
 },
 {
 "form_id": "10121",
@@ -9293,7 +9293,7 @@
 "とりみあん"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10121.png"
 },
 {
 "form_id": "10122",
@@ -9304,7 +9304,7 @@
 "とりみあん"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10122.png"
 },
 {
 "form_id": "10123",
@@ -9315,7 +9315,7 @@
 "とりみあん"
 ],
 "is_default": true,
-"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png"
+"image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10123.png"
 },
 {
 "form_id": "676",
